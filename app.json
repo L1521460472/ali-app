@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/index",
+    "pages/drugInfo/index",
+    "pages/logs/index",
+    "pages/user/index"
+  ],
+  "window": {
+    "defaultTitle": "扫码放心",
+    "backgroundColor": "#1e6ffc"
+  },
+  "behavior": {
+    "requestReferrerStrategy": "page"
+  }
+}

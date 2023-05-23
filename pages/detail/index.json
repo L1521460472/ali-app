@@ -1,0 +1,10 @@
+{
+ "defaultTitle": "药品验证",
+  "usingComponents": {
+    "icon": "antd-mini/es/Icon/index",
+    "container": "antd-mini/es/Container/index",
+    "steps": "antd-mini/es/Steps/index",
+    "list": "antd-mini/es/List/index",
+    "list-item": "antd-mini/es/List/ListItem/index"
+  }
+}

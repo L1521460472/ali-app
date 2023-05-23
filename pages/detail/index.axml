@@ -1,0 +1,91 @@
+<view class="detail">
+    <view  a:if='{{count == 1}}' class="detail-header">
+        <view class="detail-header-box">
+            <view class="detail-header-box1">84006  30002  64123  84088</view>
+            <view class="detail-header-box2">追溯码验证通过</view>
+        </view>
+    </view>
+    <view a:else class="detail-headers">
+        <view class="detail-header-box">
+            <view class="detail-header-box1">84006  30002  64123  84088</view>
+            <view class="detail-header-box2">药品被多人验证</view>
+        </view>
+    </view>
+    <view class="detail-banner">
+        <view class="detail-banner-box">
+            <view class="detail-banner-box1">
+                <view class="detail-banner-box3"> <icon type="QuestionCircleFill" style="color:#e5b450;font-size: 22px;" size="24" /> <text style="font-weight: bold;margin-left: 6px;letter-spacing: 2px;">总扫码人数 <text style="color:#e5b450;font-weight: 400;"> {{ verifyObj.scanCodePeopleNumber }} </text> 人</text></view>
+                <view class="detail-banner-box4">药品被多人验证药品被多人验证药品被多人验证药品被多人验证药品被多人验证</view>
+            </view>
+            <view class="detail-banner-box2">
+                <view class="detail-banner-box3"> <icon type="CheckCircleFill" style="color:#e5b450;font-size: 22px;" size="24" /><text style="font-weight: bold;margin-left: 6px;">在有效期内</text></view>
+                <view class="detail-banner-box4">有效期至：{{verifyObj.periodValidityTime}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="detail-info">
+        <view style="font-size: 20px;font-weight: bold;">验证明细</view>
+         <steps
+            items="{{items}}"
+            current="{{2}}"
+            direction="vertical"
+        >
+            <icon
+            slot="icon"
+            className="iconfont icon-xia"
+            slot-scope="item"
+            type="{{iconList[item.index]}}"
+            a:if="{{iconList[item.index]}}"
+            >
+                123
+            </icon>
+            
+
+            <view slot="title" slot-scope="item">
+                <text a:if="{{item.value.title == '使用信息'}}">
+                    {{'使用信息：'+ '扫码'+verifyObj.scanCodePeopleNumber+'人'+verifyObj.number + '次'}}
+                </text>
+                <text a:else>{{item.value.title}}</text>
+                
+            </view>
+
+            <view slot="description" slot-scope="item">
+            <block a:if="{{ item.value.title == '生产信息'}}">
+                <view class="description-list">
+                    <view class="description-list-left">生产厂家</view>
+                    <view class="description-list-right">{{verifyObj.manufacturer}}</view>
+                </view>
+                <view class="description-list">
+                    <view class="description-list-left">生产日期</view>
+                    <view class="description-list-right">{{verifyObj.manufacturerTime}}</view>
+                </view>
+                <view class="description-list">
+                    <view class="description-list-left">药品批号</view>
+                    <view class="description-list-right">{{verifyObj.drugBatchNumber}}</view>
+                </view>
+             </block>
+             <block a:elif="{{ item.value.title == '使用信息'}}">
+                <view a:for="{{verifyObj.verifyBarCodeUseVos}}" a:for-index="idx" a:for-item="itemName">
+                    <view class="description-list">
+                        <view class="description-list-left">{{itemName.scanCodePeople}}</view>
+                        <view class="description-list-right">总计扫码{{itemName.scanCodeNumber}}次</view>
+                    </view>
+                    <view class="description-list-item">
+                        <view class="description-list-item-box" a:for="{{itemName.verifyBarCodeUseDataVos}}" a:for-index="idxs" a:for-item="items">
+                            <view class="description-list-left">{{items.address}}</view>
+                            <view class="description-list-right">{{items.time}}</view>
+                        </view>
+                    </view>
+                </view>
+             </block>
+             <block a:else="{{ item.value.title == '药品效期'}}">
+                <view class="description-list">
+                    <view class="description-list-left">药品有效期至</view>
+                    <view class="description-list-right">{{verifyObj.periodValidityTime}}</view>
+                </view>
+             </block>
+            </view>
+
+        </steps>
+    </view>
+</view>

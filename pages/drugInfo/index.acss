@@ -1,0 +1,127 @@
+.drugInfo {
+  padding-bottom: 50px;
+}
+
+.item-content {
+  /* padding: 12px; */
+  font-size: 17px;
+  color: #333;
+  line-height: 24px;
+}
+
+.demo-title {
+  padding: 14px 16px;
+  color: #999;
+}
+
+.demo-collapse {
+
+  /* border-bottom: 1px solid #eee; */
+  padding: 12px 12px 0px 12px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.ant-collapse-item-content-container {
+  padding-right: 12px;
+}
+
+.ant-collapse-item {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.ant-list-item:nth-child(2n+1) {
+  background-color: #fbfbfb;
+}
+
+.ant-list-item {
+  line-height: 18px;
+  border: none !important;
+}
+
+.ant-collapse-item-content {
+  padding: 0;
+}
+
+.ant-list-item-content-container {
+  width: 100px;
+
+}
+
+.ant-list-item-content-main {
+  font-size: 14px;
+  color: #909090;
+}
+
+.ant-list-item-extra-brief {
+  font-size: 14px;
+  color: #333;
+}
+
+.ant-list-item-extra-container {
+  width: calc(100% - 100px);
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 20px;
+  box-sizing: border-box;
+
+}
+
+.dyt-list {
+  margin-top: 0;
+}
+
+.dyt-list .am-list-item-thumb {
+  border-radius: 5px;
+}
+
+.dyt-list .am-list-briefX {
+  color: #909090;
+  font-size: 14px;
+}
+
+.ant-collapse-item-line {
+  border-bottom: none;
+}
+
+.am-list-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.am-list-item .a-icon-success_no_circle {
+  fill: #1677ff;
+}
+
+.am-list-item {
+  margin: 0 10px;
+}
+
+.am-list-item:nth-child(2n+1) {
+  background-color: #fbfbfb;
+}
+
+.am-list-item .a-shared-checkbox {
+  border: 0;
+}
+
+.am-list-content {
+  width: 110px;
+  flex: 1.2;
+}
+
+.am-list-extra {
+  justify-content: flex-start;
+}
+
+.list-title {
+  width: 110px;
+  white-space: pre-wrap;
+}
+
+.list-extra {
+  width: 100%;
+  text-align: left;
+}

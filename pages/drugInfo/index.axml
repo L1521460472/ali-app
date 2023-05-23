@@ -1,0 +1,89 @@
+<view class="drug">
+    <view class="drugInfo">
+      <collapse
+            className="demo-collapse"
+            a:if="{{drugList1.length > 0}}"
+            defaultCurrent="{{[0]}}"
+            items="{{items}}"
+            onChange="onChange"
+            accordion
+        >
+            <view slot="title" slot-scope="item" class="title">
+                {{drugList1[0].type}}
+            </view>
+            <view slot="content" slot-scope="item">
+                <list>
+                    <list-item a:for="{{drugList1}}" a:for-index="idx1" a:for-item="item1" extraBrief="{{item1.v}}">{{item1.k}}</list-item>
+                </list>
+            </view>
+        </collapse>
+        <collapse
+            className="demo-collapse"
+            a:if="{{drugList2.length > 0}}"
+            defaultCurrent="{{[0]}}"
+            items="{{items}}"
+            onChange="onChange"
+            accordion
+        >
+            <view slot="title" slot-scope="item" class="title">
+                {{drugList2[0].type}}
+            </view>
+            <view slot="content" slot-scope="item">
+                <list>
+                    <list-item a:for="{{drugList2}}" a:for-index="idx2" a:for-item="item2" extraBrief="{{item2.v}}">{{item2.k}}</list-item>
+                </list>
+            </view>
+        </collapse>
+        <collapse
+            className="demo-collapse"
+            a:if="{{drugList3.length > 0}}"
+            defaultCurrent="{{[0]}}"
+            items="{{items}}"
+            onChange="onChange"
+            accordion
+        >
+            <view slot="title" slot-scope="item" class="title">
+                {{drugList3[0].type}}
+            </view>
+            <view slot="content" slot-scope="item">
+                <list>
+                    <list-item a:for="{{drugList3}}" a:for-index="idx3" a:for-item="item3" extraBrief="{{item3.v}}">{{item3.k}}</list-item>
+                </list>
+            </view>
+        </collapse>
+        <collapse
+            className="demo-collapse"
+            a:if="{{drugList4.length > 0}}"
+            defaultCurrent="{{[0]}}"
+            items="{{items}}"
+            onChange="onChange"
+            accordion
+        >
+            <view slot="title" slot-scope="item" class="title">
+                {{drugList4[0].type}}
+            </view>
+            <view slot="content" slot-scope="item">
+                <list>
+                    <list-item a:for="{{drugList4}}" a:for-index="idx4" a:for-item="item4" extraBrief="{{item4.v}}">{{item4.k}}</list-item>
+                </list>
+            </view>
+        </collapse>
+        <collapse
+            className="demo-collapse"
+            a:if="{{drugList5.length > 0}}"
+            defaultCurrent="{{[0]}}"
+            items="{{items}}"
+            onChange="onChange"
+            accordion
+        >
+            <view slot="title" slot-scope="item" class="title">
+                {{drugList5[0].type}}
+            </view>
+            <view slot="content" slot-scope="item">
+                <list>
+                    <list-item a:for="{{drugList5}}" a:for-index="idx5" a:for-item="item5" extraBrief="{{item5.v}}">{{item5.k}}</list-item>
+                </list>
+            </view>
+        </collapse>
+    </view>
+</view>

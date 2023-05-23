@@ -1,0 +1,156 @@
+.detail {
+  /* width: 100%;  */
+}
+
+.detail-header {
+  width: 100%;
+  height: 190px;
+  padding: 30px 16px;
+  box-sizing: border-box;
+  background: url('../../image/bj02.png') no-repeat;
+  background-size: 100%;
+}
+
+.detail-headers {
+  width: 100%;
+  height: 190px;
+  padding: 30px 16px;
+  box-sizing: border-box;
+  background: url('../../image/bj01.png') no-repeat;
+  background-size: 100%;
+}
+
+.detail-header-box1 {
+  color: #fff;
+  font-size: 16px;
+  margin: -1px 0px 10px 22px;
+
+}
+
+.detail-header-box2 {
+  color: #fff;
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+.detail-banner {
+  width: 100%;
+  height: 120px;
+
+  position: relative;
+}
+
+.detail-banner-box {
+  position: absolute;
+  top: -60px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: calc(100% - 40px);
+  height: 170px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.detail-banner-box1 {
+  height: 62%;
+}
+
+.detail-banner-box2 {
+  height: 38%;
+}
+
+.detail-banner-box3 {
+  display: flex;
+  align-items: center;
+  line-height: 28px;
+}
+
+.detail-banner-box4 {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  margin-right: 20px;
+  margin-top: 4px;
+  font-size: 14px;
+  color: #909090;
+}
+
+.detail-info {
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-top: 8px;
+}
+
+
+.ant-steps.ant-steps-vertical {
+  padding: 15px 8px;
+}
+
+/* .ant-list-item-line{
+    padding: 3px;
+} */
+
+.description-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+}
+
+.description-list-left {
+  width: 120px;
+  font-size: 15px;
+  color: #909090;
+}
+
+.description-list-right {
+  font-size: 15px;
+  color: #333;
+}
+
+.description-list-item {
+  /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+  background-color: #f9f9f9;
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin: 6px 0;
+}
+
+.description-list-item-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 24px;
+  color: #909090;
+}
+
+.ant-steps-item-vertical .ant-steps-item-title {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.ant-steps-item-active .ant-steps-item-title {
+  color: #333;
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-xia:before {
+  content: "\e610" !important;
+}
+
+.ant-steps-item-finish::after {
+  background-color: #f6f5f8;
+}

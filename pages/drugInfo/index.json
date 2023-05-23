@@ -1,0 +1,10 @@
+{
+  "defaultTitle": "扫码放心·药品追溯",
+  "usingComponents": {
+    "collapse": "antd-mini/es/Collapse/index",
+    "list": "antd-mini/es/List/index",
+    "list-item": "antd-mini/es/List/ListItem/index",
+    "icon": "antd-mini/es/Icon/index",
+    "switch": "antd-mini/es/Switch/index"
+  }
+}

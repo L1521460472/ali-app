@@ -1,0 +1,50 @@
+
+<view>
+  <view class="header">
+    <view class="header-box">
+      <view class="header-box-top">
+        <text class="box1">药品唯一身份标识码</text>
+        <image src="../../image/tiaoxingma.png" class="box2"  mode="aspectFit" />
+        <text class="box3">84006  30002  64123  84088</text>
+      </view>
+      <view class="header-box-bot">
+        <text style="font-size:22px;color:#ebb62f;margin-top: 16px;">药品被多人验证</text>
+        <text style="color:#948e97;margin-top: 6px;letter-spacing: 2px;">药品已被<text style="color:#ebb62f;">5</text>人扫码查询</text>
+        <button style="width:90px;border-radius: 20px;margin-top: 12px;" type="primary" size="small" inline onTap="toDetail">验证详情 > </button>
+      </view>
+    </view>
+  </view>
+
+  <view class="banner">
+    <view class="drug-info" onTap="toDrugInfo">
+      <view class="drug-info-top">
+        <view class="drug-info-left">
+          <view class="drug-info-title">
+            <text style="font-size:22px;">片仔癀</text>
+          </view>
+          <view class="drug-info-box">
+            <text style="color:#948e97;margin-bottom: 10px;">药品规格：1粒/盒</text>
+            <text style="color:#948e97;display: flex;line-height: 22px;"> <text style="width: 120px;">生产厂家：</text> <text>漳州片仔癀药业股份有限公司</text> </text>
+          </view>
+        </view>
+        <view class="drug-info-right">
+          <image src="../../image/image.png" mode="aspectFit" />
+        </view>
+      </view>
+      <view class="drug-info-bom">
+        <button style="width:180px;font-size: 16px;border-radius: 20px;margin-top: 10px;" type="default" size="medium" inline>药 品 追 溯 信 息</button>
+      </view>
+    </view>
+  </view>
+  <view>
+      <button
+        type="primary"
+        icon="ScanningOutline"
+        style="font-size: 30px;position: fixed;bottom:40px;left: 0;right: 0;margin: auto;"
+        onTap="handleTap"
+        inline
+        className="circle"
+      >
+      </button>
+    </view>
+</view>

@@ -1,0 +1,9 @@
+{
+  "defaultTitle": "扫码放心",
+  "titleBarColor": "#1e6ffc",
+  "usingComponents": {
+    "icon": "antd-mini/es/Icon/index",
+    "button": "antd-mini/es/Button/index",
+    "toast": "antd-mini/es/Toast/index"
+  }
+}
