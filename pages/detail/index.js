@@ -8,6 +8,8 @@
  */
 Page({
   data: {
+    titleBarHeight: 0,
+    statusBarHeight: 0,
     count: 2,
     verifyObj: {},
     items: [
@@ -35,6 +37,18 @@ Page({
   },
   onLoad(query) {
     // 页面加载
+    const {
+      titleBarHeight,
+      statusBarHeight,
+    } = my.getSystemInfoSync();
+    this.setData({
+      titleBarHeight,
+      statusBarHeight,  
+    });
+    my.setNavigationBar({
+      frontColor: '#000000',
+      backgroundColor: '#ffffff'
+    })
     var that = this;
     my.request({
       url: 'https://code.ipcipc.cn/prod-api/trace/barCode/verify/81006105551115275674',

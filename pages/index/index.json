@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "扫码放心",
+  "defaultTitle": "",
   "titleBarColor": "#1e6ffc",
   "usingComponents": {
     "icon": "antd-mini/es/Icon/index",

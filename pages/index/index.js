@@ -8,6 +8,8 @@
  */
 Page({
   data:{
+    titleBarHeight: 0,
+    statusBarHeight: 0,
     code: 81006105551115275674,
     count: null,
     toastShow: false,
@@ -49,11 +51,13 @@ Page({
   },
   onLoad(query) {
     // 页面加载
-    my.getTitleColor({
-      success: res => {
-        //RGBA 格式的十六进制颜色值，如 #323239FF。
-        console.log('导航栏背景色：',res.color);
-      },
+    const {
+      titleBarHeight,
+      statusBarHeight,
+    } = my.getSystemInfoSync();
+    this.setData({
+      titleBarHeight,
+      statusBarHeight,  
     });
     var that = this;
     my.request({
@@ -121,5 +125,12 @@ Page({
     this.setData({
       toastShow: false
     })
+  },
+  //点击手机标题栏触发的事件,需要在 index.json 配置 titlePenetrate:"YES"
+  onTitleBar(e) {
+    console.log(e)
+    // my.alert({
+    //   title: '点击了标题栏'
+    // });
   }
 });

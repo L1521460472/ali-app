@@ -4,3 +4,19 @@ page {
   background: #f7f7f7;
   font-family: "苹方-简";
 }
+.custom-nav {
+  background-image: linear-gradient(to bottom, #1e6ffc, #1e6ffc);
+}
+
+.custom-titleBar {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  margin-left: 16px;
+}
+.image{
+  width: 32px;
+  height: 32px;
+  margin-right: 4px;
+}

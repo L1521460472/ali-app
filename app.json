@@ -7,8 +7,10 @@
     "pages/user/index"
   ],
   "window": {
-    "defaultTitle": "扫码放心",
-    "backgroundColor": "#1e6ffc"
+    "transparentTitle": "always",
+    "titlePenetrate": "YES",
+    "defaultTitle": "", 
+    "titleBarColor": "#000000"
   },
   "behavior": {
     "requestReferrerStrategy": "page"

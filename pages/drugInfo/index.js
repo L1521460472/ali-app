@@ -8,6 +8,8 @@
  */
 Page({
   data: {
+    titleBarHeight: 0,
+    statusBarHeight: 0,
     randomLine: 0,
     productTypeOptions: [],
     drugList1: [],
@@ -32,6 +34,18 @@ Page({
   },
   onLoad(query) {
     // 页面加载
+    const {
+      titleBarHeight,
+      statusBarHeight,
+    } = my.getSystemInfoSync();
+    this.setData({
+      titleBarHeight,
+      statusBarHeight,  
+    });
+    my.setNavigationBar({
+      frontColor: '#000000',
+      backgroundColor: '#ffffff'
+    })
     var that = this;
     // my.request({
     //   url: 'https://code.ipcipc.cn/prod-api/system/dict/data/type/sys_product_type',

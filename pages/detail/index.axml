@@ -1,4 +1,11 @@
 <view class="detail">
+<view class="custom-nav" style="height:{{titleBarHeight + statusBarHeight}}px">
+  <view class="custom-titleBar" 
+        style="height:{{titleBarHeight}}px;padding-top:{{statusBarHeight}}px;"
+        onTap="onTitleBar" >
+    <text style="font-size:18px;">药品验证</text>
+  </view>
+</view>
     <view  a:if='{{count == 1}}' class="detail-header">
         <view class="detail-header-box">
             <view class="detail-header-box1">84006  30002  64123  84088</view>

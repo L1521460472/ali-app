@@ -1,5 +1,12 @@
 
 <view>
+<view class="custom-nav" style="height:{{titleBarHeight + statusBarHeight}}px">
+  <view class="custom-titleBar" 
+        style="height:{{titleBarHeight}}px;padding-top:{{statusBarHeight}}px;"
+        onTap="onTitleBar" >
+    <image  class="image" src="../../image/title.png" mode="aspectFit" /> <text style="font-size:18px;">扫码放心</text>
+  </view>
+</view>
   <view class="header">
     <view a:if='{{count == 1}}' class="header-box">
       <view class="header-box-top">

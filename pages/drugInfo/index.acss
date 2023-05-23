@@ -1,3 +1,15 @@
+.custom-nav {
+  background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+}
+
+.custom-titleBar {
+  display: flex;
+  align-items: center;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: 32px;
+}
 .drugInfo {
   padding-bottom: 50px;
 }
