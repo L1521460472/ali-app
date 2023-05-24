@@ -1,5 +1,5 @@
 <view class="drug">
-<view class="custom-nav" style="height:{{titleBarHeight + statusBarHeight}}px">
+<view class="custom-nav" style="height:{{titleBarHeight + statusBarHeight + 10}}px">
   <view class="custom-titleBar" 
         style="height:{{titleBarHeight}}px;padding-top:{{statusBarHeight}}px;"
         onTap="onTitleBar" >

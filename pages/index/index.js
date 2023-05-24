@@ -4,7 +4,7 @@
  * @Autor: lijiancong
  * @Date: 2023-05-23 09:15:41
  * @LastEditors: lijiancong
- * @LastEditTime: 2023-05-23 20:53:11
+ * @LastEditTime: 2023-05-24 11:25:01
  */
 Page({
   data:{
@@ -13,7 +13,7 @@ Page({
     code: 81006105551115275674,
     count: null,
     toastShow: false,
-    content: '失败',
+    content: '1',
     drugInfo: {},
     drugInfoDetail: {}
   },
@@ -51,15 +51,39 @@ Page({
   },
   onLoad(query) {
     // 页面加载
-    const {
-      titleBarHeight,
-      statusBarHeight,
-    } = my.getSystemInfoSync();
-    this.setData({
-      titleBarHeight,
-      statusBarHeight,  
-    });
     var that = this;
+    function compareVersion(v1, v2) {
+      var s1 = v1.split("."); 
+      var s2 = v2.split("."); 
+      var len = Math.max(s1.length, s2.length); 
+      for (let i = 0; i < len; i++) {
+          var num1 = parseInt(s1[i] || "0"); 
+          var num2 = parseInt(s2[i] || "0"); 
+          if (num1 > num2) { 
+              return 1; 
+          } else if (num1 < num2) { 
+              return -1; 
+          }
+      }
+      return 0;
+    } 
+    const clientVersion = my.env.clientVersion || my.getSystemInfo().clientVersion; 
+    const sdkVersion = my.SDKVersion; 
+    if(compareVersion(sdkVersion, '1.25.4') >= 0 && compareVersion(clientVersion,'10.1.90') >= 0) { 
+        const res = my.getMenuButtonBoundingClientRect();
+        // console.log(res)
+        that.setData({
+          titleBarHeight:res.height,
+          statusBarHeight: res.top,  
+        });
+    } else {
+        console.log('当前环境不支持调用my.getMenuButtonBoundingClientRect');
+    }
+    // const {
+    //   titleBarHeight,
+    //   statusBarHeight,
+    // } = my.getSystemInfoSync();
+    
     my.request({
       url: 'https://code.ipcipc.cn/prod-api/trace/barCode/81006105551115275674',
       method:'get',
@@ -132,5 +156,20 @@ Page({
     // my.alert({
     //   title: '点击了标题栏'
     // });
-  }
+  },
+  // compareVersion(v1, v2) {
+  //   var s1 = v1.split("."); 
+  //   var s2 = v2.split("."); 
+  //   var len = Math.max(s1.length, s2.length); 
+  //   for (let i = 0; i < len; i++) {
+  //       var num1 = parseInt(s1[i] || "0"); 
+  //       var num2 = parseInt(s2[i] || "0"); 
+  //       if (num1 > num2) { 
+  //           return 1; 
+  //       } else if (num1 < num2) { 
+  //           return -1; 
+  //       }
+  //   }
+  //   return 0;
+  // } 
 });

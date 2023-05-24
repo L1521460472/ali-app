@@ -1,17 +1,25 @@
+/*
+ * @Description: 
+ * @Version: 1.0.0
+ * @Autor: lijiancong
+ * @Date: 2023-05-24 09:36:23
+ * @LastEditors: lijiancong
+ * @LastEditTime: 2023-05-24 09:55:47
+ */
 App({
   data: {
-    titleBarHeight: 0,
-    statusBarHeight: 0,
+    // titleBarHeight: 0,
+    // statusBarHeight: 0,
   },
   onLaunch(options) {
-    const {
-      titleBarHeight,
-      statusBarHeight,
-    } = my.getSystemInfoSync();
-    this.setData({
-      titleBarHeight,
-      statusBarHeight,  
-    });
+    // const {
+    //   titleBarHeight,
+    //   statusBarHeight,
+    // } = my.getSystemInfoSync();
+    // this.setData({
+    //   titleBarHeight,
+    //   statusBarHeight,  
+    // });
     // 第一次打开
     // options.query == {number:1}
     console.info('App onLaunch');
@@ -20,13 +28,6 @@ App({
     // 从后台被 scheme 重新打开
     // options.query == {number:1}
   },
-  //点击手机标题栏触发的事件,需要在 index.json 配置 titlePenetrate:"YES"
-  onTitleBar(e) {
-    console.log(e)
-    // my.alert({
-    //   title: '点击了标题栏'
-    // });
-  }
 });
 
 
